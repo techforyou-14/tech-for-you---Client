@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .title1 {
+    @apply text-4xl font-bold mb-4;
+  }
+
+  .title2 {
+    @apply text-3xl font-bold mb-3;
+  }
+
+  .title3 {
+    @apply text-2xl font-bold mb-2;
+  }
+
+  .paragraph {
+    @apply text-base leading-6 mb-4;
+  }
+}
