@@ -25,8 +25,8 @@ export function Router() {
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
 
-                <Route path='/' element={<ProtectedRoute element={Home} />} />
-                <Route path='/home' element={<ProtectedRoute element={Home} />} />
+                <Route path='/' element={<Home/>} />
+                <Route path='/home' element={<Home/>} />
 
                 <Route path='*' element={<NotFound />} />
             </Routes>
