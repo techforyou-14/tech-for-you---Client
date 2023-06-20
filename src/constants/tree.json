@@ -40,16 +40,16 @@
       "user_id": "",
       "trunk_characteristics": "",
       "tree": "Lentisco",
-      "Tipo_de_Hoja": "Perenne",
-      "Forma_del_Árbol": "Arbusto/árbol",
-      "Altura_Máxima": "2-5_metros",
-      "Tolerancia_a_la_Sxequía": "Alta",
-      "Tolerancia_a_la_Salinidad": "Alta",
+      "tipo_de_hoja": "Perenne",
+      "forma_del_arbol": "Arbusto/árbol",
+      "altura_máxima": "2-5_metros",
+      "tolerancia_a_la_sequia": "Alta",
+      "tolerancia_a_la_salinidad": "Alta",
       "Resistencia_al_Viento": "Buena",
-      "Crecimiento": "Lento",
-      "Características_del_Tronco": "Corteza_lisa",
+      "crecimiento": "Lento",
+      "características_del_tronco": "Corteza_lisa",
       "Usos_Comunes": "Estabilización_de_suelos,_setos,_jardines_rocosos",
-      "Requerimientos_de_Suelo": "Suelos_pobres_y_secos"
+      "requerimientos_de_suelo": "Suelos_pobres_y_secos"
     }
   }
 ]
