@@ -42,12 +42,15 @@ function Navbar() {
         });
     };
     return (
-        <div className="navbar bg-base-100 py-8 px-0 ">
+        <div className="navbar bg-base-100 py-8 px-0">
             <div className="flex-1">
                 <Link to="/home" className="hover:scale-110 active:scale-100 title3 font-extrabold transition-all">Project</Link>
             </div>
             <div className="flex-none gap-4">
                 <div className="dropdown dropdown-end">
+                    <ToggleDarkMode className='btn btn-ghost btn-circle ' />
+                </div>
+                <div className="dropdown dropdown-end z-10">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar scale-110">
                         <div className="w-10 rounded-full">
                             <HiUserCircle className='w-full h-full' />
