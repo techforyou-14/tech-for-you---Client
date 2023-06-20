@@ -27,7 +27,7 @@ export function Router() {
                 <Route path='/register' element={<Register />} />
 
                 <Route path='/' element={<Choose/>} />
-                <Route path='/home' element={<Home/>} />
+                <Route path='/home' element={<ProtectedRoute element={Home}/>} />
 
                 <Route path='*' element={<NotFound />} />
             </Routes>

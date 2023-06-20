@@ -14,16 +14,19 @@ function FormLogin({ className }) {
     const navigate = useNavigate()
 
     const onSubmit = async (dataForm) => {
+        console.log("sdafsdaf")
         try {
             const { data } = await authService.login(dataForm);
-            setToken(data.access_token);
+            console.log(data)
+            setToken(data.Token);
             swal({
                 text: "Has ingresado con éxito",
                 icon: "success",
             });
             navigate("/home")
         } catch (error) {
-            let errorMessage = error.response.status === 422 ? "Correo o contraseña incorrectos." : "Error desconocido"
+            console.log(error)
+            let errorMessage = error.response.status === 401 ? "Correo o contraseña incorrectos." : "Error desconocido"
             swal({
                 title: "Error",
                 text: errorMessage,

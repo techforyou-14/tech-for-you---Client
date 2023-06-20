@@ -9,7 +9,6 @@ import 'swiper/css/scrollbar';
 
 export default function Carousel() {
 
-    console.log(Frases)
     return (
         <Swiper
             // install Swiper modules

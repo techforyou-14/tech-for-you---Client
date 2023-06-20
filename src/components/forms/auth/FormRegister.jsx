@@ -17,7 +17,7 @@ function FormRegister({ className }) {
     try {
       const { data } = await authService.register(dataForm);
 
-      setToken(data.access_token);
+      setToken(data.Token);
       swal({
         text: "Tu cuenta ha sido creada con éxito",
         icon: "success",
