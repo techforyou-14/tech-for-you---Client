@@ -3,10 +3,10 @@ import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 
 export const AxiosInterceptor = () => {
-  const { token } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const interceptor = axios.interceptors.request.use((config) => {
-    config.headers.Authorization = `Bearer ${token}`;
+    config.headers.Authorization = `Bearer ${user.Token}`;
     return config;
   });
 };

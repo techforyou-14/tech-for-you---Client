@@ -1,0 +1,55 @@
+[
+  {
+    "algarrobo": {
+      "name":"",
+      "alias": "",
+      "user_id": "",
+      "trunk_characteristics": "",
+      "tree": "Algarrobo",
+      "tipo_de_hoja": "Perenne",
+      "forma_del_árbol": "Copa_redondeada",
+      "altura_máxima": "10-15_metros",
+      "tolerancia_a_la_sequía": "Alta",
+      "tolerancia_a_la_salinidad": "Moderada",
+      "resistencia_al_viento": "Buena",
+      "crecimiento": "Lento_a_moderado",
+      "características_del_tronco": "Corteza_rugosa_y_oscura",
+      "usos_comunes": "Paisajismo,_sombreado_en_jardines_y_zonas_urbanas",
+      "requerimientos_de_suelo": "Suelos_pobres_y_secos"
+    },
+    "olivo": {
+      "name":"",
+      "alias": "",
+      "user_id": "",
+      "trunk_characteristics": "",
+      "tree": "Olivo",
+      "tipo_de_hoja": "Perenne",
+      "forma_del_árbol": "Copa_amplia",
+      "altura_máxima": "6-10_metros",
+      "tolerancia_a_la_sequía": "Alta",
+      "tolerancia_a_la_salinidad": "Moderada",
+      "resistencia_al_viento": "Buena",
+      "crecimiento": "Lento_a_moderado",
+      "características_del_tronco": "Corteza_grisácea_y_rugosa",
+      "usos_comunes": "Producción_de_aceite_de_oliva,_ornamental",
+      "requerimientos_de_suelo": "Suelos_pobres_y_bien_drenados"
+    },
+    "lentisco": {
+      "name":"",
+      "alias": "",
+      "user_id": "",
+      "trunk_characteristics": "",
+      "tree": "Lentisco",
+      "Tipo_de_Hoja": "Perenne",
+      "Forma_del_Árbol": "Arbusto/árbol",
+      "Altura_Máxima": "2-5_metros",
+      "Tolerancia_a_la_Sxequía": "Alta",
+      "Tolerancia_a_la_Salinidad": "Alta",
+      "Resistencia_al_Viento": "Buena",
+      "Crecimiento": "Lento",
+      "Características_del_Tronco": "Corteza_lisa",
+      "Usos_Comunes": "Estabilización_de_suelos,_setos,_jardines_rocosos",
+      "Requerimientos_de_Suelo": "Suelos_pobres_y_secos"
+    }
+  }
+]

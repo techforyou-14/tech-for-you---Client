@@ -1,75 +1,92 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Card from "../components/ui/commons/Card";
 import Navbar from "../components/ui/navbar/Navbar";
-
-
+import districts from "../constants/district.json";
+import jsonTree from "../constants/tree.json";
+import AuthContext from "../context/AuthContext";
+import { treeService } from "../services/tree.service";
+import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 export default function choose() {
-
+  const { user } = useContext(AuthContext);
   const [district, setDistrict] = useState();
-  const [tree, setTree] = useState();
+  const [tree, setTree] = useState("algarrobo");
   const [treeName, setTreeName] = useState();
+  const navigate = useNavigate()
 
- let requestBody
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const handleSubmit = (e) => {
-    
-    // Create an object representing the request body
-    requestBody = {
-      district,
-      tree,
-      treeName
-    }}
+    const selectedTree = jsonTree[0][tree];
+    selectedTree.alias = treeName;
+    selectedTree.district = district;
+    selectedTree.user_id = user.id;
+    console.log(selectedTree);
 
+    const { data } = await treeService.create(selectedTree);
+    console.log(data);
+    swal({
+      text: "Has creado un arbol",
+      icon: "success",
+    });
+
+    navigate("/home")
+  };
 
   return (
     <>
       <Navbar />
-      <div className="w-full px-[5%] md:px-[10%]  min-h-screen ">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full px-[5%] md:px-[10%]  min-h-screen "
+      >
         <div className="grid grid-cols-2 gap-x-4  ">
-          <Card>
+          <Card className="flex flex-col justify-between">
             <figure className="  px-2 pt-2  ">
               <img
                 src="/public/distritos.JPG"
                 alt="map of district"
-                className="rounded-xl w-screen"
+                className="rounded-xl w-full shadow-md aspect-video"
               />
             </figure>
-            <div className="card-body items-center text-center">
-              {/*  <h2 className="card-title">Elige el distrito:</h2> */}
-              <select className="select select-primary w-full max-w-xs" onChange={(e) => setDistrict(e.target.value)}>
-                <option disabled selected>
-                  Elige un distrito
-                </option>
-                <option>Game of Thrones</option>
-                <option>Lost</option>
-                <option>Breaking Bad</option>
-                <option>Walking Dead</option>
+            <div className="p-4 items-center text-center">
+              <label htmlFor="" className="label ">
+                Elije un distrito
+              </label>
+              <select
+                className="select select-primary w-full max-w-xs"
+                onChange={(e) => setDistrict(e.target.value)}
+              >
+                {districts.map((district) => (
+                  <option key={district} value={district}>
+                    {district}
+                  </option>
+                ))}
               </select>
-              {/* <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
-    </div> */}
             </div>
           </Card>
-          <Card>
+          <Card className="flex flex-col justify-between">
             <figure className="    ">
               <img
                 src="/public/arbol.JPG"
                 alt="arboles"
-                className="rounded-xl w-50 "
+                className="rounded-xl w-full shadow-md aspect-video "
               />
             </figure>
-            <div className="card-body items-center text-center">
-              {/* <h2 className="card-title">Elige un arbol:</h2> */}
-              <select className="select select-primary w-full max-w-xs" onChange={(e) => setTree(e.target.value)}>
-                <option disabled selected>
-                  Elige un arbol
-                </option>
-                <option>Algarrobo</option>
-                <option>Lentisco</option>
-                <option>Olivo</option>
-                <option>Cipres</option>
-                <option>Pino Piñonero</option>
+            <div className="p-4 items-center text-center">
+              <label className="label">Elige un arbol</label>
+              <select
+                required
+                defaultValue={"algarrobo"}
+                className="select select-primary w-full max-w-xs"
+                onChange={(e) => setTree(e.target.value)}
+              >
+                <option value="algarrobo">Algarrobo</option>
+                <option value="lentisco">Lentisco</option>
+                <option value="olivo">Olivo</option>
+                <option value="cipres">Cipres</option>
+                <option value="pino">Pino Piñonero</option>
               </select>
             </div>
           </Card>
@@ -81,27 +98,24 @@ export default function choose() {
               <div>
                 <label className="label">
                   <span className="label-text font-bold">
-                    Como se llamara tu arbol?{" "}
+                    Como se llamara tu arbol?
                   </span>
                 </label>
                 <input
                   type="text"
+                  required
                   placeholder=""
                   className="input input-bordered w-full max-w-xs"
                   onChange={(e) => setTreeName(e.target.value)}
                 />
               </div>
-              <div >
-                
-                <button className="btn btn-md btn-primary" onClick={handleSubmit}>
-                  Confirmar
-                </button>
-                
+              <div>
+                <button className="btn btn-md btn-primary">Confirmar</button>
               </div>
             </div>
           </Card>
         </div>
-      </div>
+      </form>
     </>
   );
 }

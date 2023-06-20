@@ -9,9 +9,9 @@ import Choose from '../views/Choose'
 
 export function Router() {
 
-    const { token } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
-    const isAuthenticated = token !== null && token !== undefined && token !== '';
+    const isAuthenticated = user.Token !== null && user.Token !== undefined && user.Token !== '';
 
     const ProtectedRoute = ({ element: Element, ...props }) => {
         return isAuthenticated ? (
@@ -26,7 +26,8 @@ export function Router() {
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
 
-                <Route path='/' element={<Choose/>} />
+                <Route path='/chose' element={<ProtectedRoute element={Choose}/>} />
+                <Route path='/' element={<ProtectedRoute element={Home}/>} />
                 <Route path='/home' element={<ProtectedRoute element={Home}/>} />
 
                 <Route path='*' element={<NotFound />} />
