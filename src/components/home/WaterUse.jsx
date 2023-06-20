@@ -34,7 +34,7 @@ export default function WaterUse() {
     return (
         <Card className="gap-y-4">
             <div>
-                <h1 className="font-bold">Agua regenerada</h1>
+                <h1 className="title3 font-bold">Agua regenerada</h1>
                 <p>
                     La reutilización consiste en dar nuevos usos al agua una vez esta se ha saneado en las depuradoras o estaciones de regeneración de agua (ERA).
                 </p>

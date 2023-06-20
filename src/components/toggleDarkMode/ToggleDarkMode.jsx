@@ -7,7 +7,7 @@ function ToggleDarkMode({className}) {
     const [isDarkMode, setIsDarkMode] = useLocalStorage();
 
     useEffect(() => {
-        document.documentElement.setAttribute('data-theme', isDarkMode ? 'winter' : 'dark');
+        document.documentElement.setAttribute('data-theme', isDarkMode ? 'fantasy' : 'mytheme');
     }, [isDarkMode]);
 
     return (

@@ -50,6 +50,7 @@ function Navbar() {
                 <Link to="/home" className="hover:scale-110 active:scale-100 title3 font-extrabold transition-all">BCN4Water</Link>
             </div>
             <div className="flex-none gap-4">
+                <ToggleDarkMode/>
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar scale-110">
                         <div className="w-10 rounded-full">

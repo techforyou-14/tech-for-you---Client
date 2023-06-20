@@ -22,7 +22,7 @@ export default function Carousel() {
             }}
         >
             {Frases.map((frase) =>
-                <SwiperSlide><div className='p-10 '>{frase.frases}</div></SwiperSlide>
+                <SwiperSlide><div className='px-10 flex items-center justify-center '>{frase.frases}</div></SwiperSlide>
             )}
 
         </Swiper>

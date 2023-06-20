@@ -58,9 +58,8 @@ export default function InfoTree() {
     return (
         <Card className="gap-y-4">
             <div className="flex flex-col">
-                <h1 className="font-bold">{treeUserApi?.alias}</h1>
+                <h1 className="title3 font-bold">{treeUserApi?.alias}</h1>
                 <ul>
-                    <button onClick={() => console.log(tree)}>AAA</button>
                     <li>Arbol: {tree.tree}</li>
                     <li>Suelo: {tree.requerimientos_de_suelo}</li>
                     <li>Altura max: {tree.altura_máxima}</li>
@@ -71,7 +70,7 @@ export default function InfoTree() {
             </div>
 
             <div>
-                <h1 className="font-bold">Zona</h1>
+                <h1 className="title3 font-bold">Zona</h1>
                 <BarChart chartData={infoZone} />
             </div>
         </Card>

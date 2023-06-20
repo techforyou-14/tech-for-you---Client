@@ -6,6 +6,7 @@ export default {
   },
   daisyui: {
     themes: [
+      "fantasy",
       {
         mytheme: {
           primary: "ECF39E",
@@ -27,6 +28,7 @@ export default {
           error: "#f87272",
         },
       },
+      
     ],
   },
   plugins: [require("daisyui")],

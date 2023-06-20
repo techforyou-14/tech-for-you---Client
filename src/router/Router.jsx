@@ -11,7 +11,7 @@ export function Router() {
 
     const { user } = useContext(AuthContext);
 
-    const isAuthenticated = user.Token !== null && user.Token !== undefined && user.Token !== '';
+    const isAuthenticated = user?.Token !== null && user?.Token !== undefined && user?.Token !== '';
 
     const ProtectedRoute = ({ element: Element, ...props }) => {
         return isAuthenticated ? (

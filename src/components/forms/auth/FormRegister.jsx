@@ -10,13 +10,12 @@ import InputForm from '../../ui/commons/InputForm';
 function FormRegister({ className }) {
 
   const { register, handleSubmit } = useForm()
-  const { setUser } = useContext(AuthContext);
+  const {user, setUser } = useContext(AuthContext);
   const navigate = useNavigate()
 
   const onSubmit = async (dataForm) => {
     try {
       const { data } = await authService.register(dataForm);
-      console.log(data)
       setUser(data)
       swal({
         text: "Tu cuenta ha sido creada con éxito",
@@ -24,7 +23,8 @@ function FormRegister({ className }) {
       });
       navigate("/chose")
     } catch (error) {
-      let errorMessage = error.response.data.message === "The email has already been taken." ? "Este correo ya está registrado.": "Error desconocido"
+      console.log(error)
+      let errorMessage = error?.response?.data?.message === "The email has already been taken." ? "Este correo ya está registrado.": "Error desconocido"
       swal({
         title:"Error",
         text: errorMessage,
