@@ -19,6 +19,18 @@ ChartJS.register(
   );
 
   export const options = {
+    scales:{
+      y:{
+        grid:{
+          display:false
+        }
+      },
+      x:{
+        grid:{
+          display:false
+        }
+      }
+    },
     responsive: true,
     plugins: {
       legend: {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "../ui/commons/Card";
-import BarChart from "./BarChart";
+import BarChart from "../ui/commons/BarChart";
 
 export default function InfoTree() {
 

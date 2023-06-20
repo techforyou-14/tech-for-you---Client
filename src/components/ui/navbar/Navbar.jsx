@@ -44,7 +44,10 @@ function Navbar() {
     return (
         <div className="navbar bg-base-100 py-8 px-0">
             <div className="flex-1">
-                <Link to="/home" className="hover:scale-110 active:scale-100 title3 font-extrabold transition-all">Project</Link>
+                <div className='w-10'>
+                    <img src="/public/BCN4Water_transpa.png" alt="logo" className="w-full" />
+                </div>
+                <Link to="/home" className="hover:scale-110 active:scale-100 title3 font-extrabold transition-all">BCN4Water</Link>
             </div>
             <div className="flex-none gap-4">
                 <div className="dropdown dropdown-end">
