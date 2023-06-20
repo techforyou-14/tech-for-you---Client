@@ -5,6 +5,7 @@ import Login from '../views/auth/Login'
 import Register from '../views/auth/Register'
 import NotFound from '../components/ui/commons/NotFound'
 import AuthContext from '../context/AuthContext'
+import Choose from '../views/Choose'
 
 export function Router() {
 
@@ -25,7 +26,7 @@ export function Router() {
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
 
-                <Route path='/' element={<Home/>} />
+                <Route path='/' element={<Choose/>} />
                 <Route path='/home' element={<Home/>} />
 
                 <Route path='*' element={<NotFound />} />

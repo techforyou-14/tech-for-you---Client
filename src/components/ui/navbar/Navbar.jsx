@@ -48,9 +48,6 @@ function Navbar() {
             </div>
             <div className="flex-none gap-4">
                 <div className="dropdown dropdown-end">
-                    <ToggleDarkMode className='btn btn-ghost btn-circle ' />
-                </div>
-                <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar scale-110">
                         <div className="w-10 rounded-full">
                             <HiUserCircle className='w-full h-full' />
