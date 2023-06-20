@@ -1,26 +1,23 @@
 import { useState } from "react";
 import Card from "../components/ui/commons/Card";
 import Navbar from "../components/ui/navbar/Navbar";
-
-
+import distritos from "../constants/distritos.json";
 
 export default function choose() {
-
   const [district, setDistrict] = useState();
   const [tree, setTree] = useState();
   const [treeName, setTreeName] = useState();
 
- let requestBody
+  let requestBody;
 
   const handleSubmit = (e) => {
-    
     // Create an object representing the request body
     requestBody = {
       district,
       tree,
-      treeName
-    }}
-
+      treeName,
+    };
+  };
 
   return (
     <>
@@ -30,38 +27,38 @@ export default function choose() {
           <Card>
             <figure className="  px-2 pt-2  ">
               <img
-                src="/public/distritos.JPG"
+                src="/distritos.JPG"
                 alt="map of district"
                 className="rounded-xl w-screen"
               />
             </figure>
             <div className="card-body items-center text-center">
-              {/*  <h2 className="card-title">Elige el distrito:</h2> */}
-              <select className="select select-primary w-full max-w-xs" onChange={(e) => setDistrict(e.target.value)}>
+              <select
+                className="select select-primary w-full max-w-xs"
+                onChange={(e) => setDistrict(e.target.value)}
+              >
                 <option disabled selected>
                   Elige un distrito
                 </option>
-                <option>Game of Thrones</option>
-                <option>Lost</option>
-                <option>Breaking Bad</option>
-                <option>Walking Dead</option>
+                {distritos.map((distrito) => (
+                  <option key={distrito} value={distrito}>{distrito}</option>
+                ))}
               </select>
-              {/* <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
-    </div> */}
             </div>
           </Card>
           <Card>
-            <figure className="    ">
+            <figure >
               <img
-                src="/public/arbol.JPG"
+                src="/arbol.JPG"
                 alt="arboles"
                 className="rounded-xl w-50 "
               />
             </figure>
             <div className="card-body items-center text-center">
-              {/* <h2 className="card-title">Elige un arbol:</h2> */}
-              <select className="select select-primary w-full max-w-xs" onChange={(e) => setTree(e.target.value)}>
+              <select
+                className="select select-primary w-full max-w-xs"
+                onChange={(e) => setTree(e.target.value)}
+              >
                 <option disabled selected>
                   Elige un arbol
                 </option>
@@ -91,12 +88,13 @@ export default function choose() {
                   onChange={(e) => setTreeName(e.target.value)}
                 />
               </div>
-              <div >
-                
-                <button className="btn btn-md btn-primary" onClick={handleSubmit}>
+              <div>
+                <button
+                  className="btn btn-md btn-primary"
+                  onClick={handleSubmit}
+                >
                   Confirmar
                 </button>
-                
               </div>
             </div>
           </Card>
