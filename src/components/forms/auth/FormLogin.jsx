@@ -10,20 +10,22 @@ import InputForm from '../../ui/commons/InputForm';
 function FormLogin({ className }) {
 
     const { register, handleSubmit } = useForm()
-    const { setToken } = useContext(AuthContext);
+    const { setUser } = useContext(AuthContext);
     const navigate = useNavigate()
 
     const onSubmit = async (dataForm) => {
         try {
             const { data } = await authService.login(dataForm);
-            setToken(data.access_token);
+            setUser(data);
+
             swal({
                 text: "Has ingresado con éxito",
                 icon: "success",
             });
-            navigate("/home")
+            navigate("/chose")
         } catch (error) {
-            let errorMessage = error.response.status === 422 ? "Correo o contraseña incorrectos." : "Error desconocido"
+            console.log(error)
+            let errorMessage = error.response.status === 401 ? "Correo o contraseña incorrectos." : "Error desconocido"
             swal({
                 title: "Error",
                 text: errorMessage,
