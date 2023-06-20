@@ -14,7 +14,6 @@ function FormLogin({ className }) {
     const navigate = useNavigate()
 
     const onSubmit = async (dataForm) => {
-        console.log("sdafsdaf")
         try {
             const { data } = await authService.login(dataForm);
             setUser(data);
