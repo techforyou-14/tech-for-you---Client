@@ -53,7 +53,7 @@ function Navbar() {
                             <HiUserCircle className='w-full h-full' />
                         </div>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow-lg bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow-lg bg-base-100 rounded-box w-52 z-10">
                         <li>
                             <a className="justify-between">
                                 Profile
