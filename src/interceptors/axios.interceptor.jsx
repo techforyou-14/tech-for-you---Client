@@ -6,9 +6,7 @@ export const AxiosInterceptor = () => {
   const { user } = useContext(AuthContext);
 
   const interceptor = axios.interceptors.request.use((config) => {
-    console.log(user.Token)
-    config.headers.Authorization = `Bearer ${user.Token}`;
-    console.log(config)
+    config.headers.Authorization = `Bearer ${user?.Token}`;
     return config;
   });
 };
