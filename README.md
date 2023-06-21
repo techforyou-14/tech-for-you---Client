@@ -50,9 +50,11 @@ $ npm run dev
 
 
 ## 👥 Equipo
-- [Lucía Gomez](github.com/EberthCastro)
-- [Gary Lima](github.com/GaryHL)
-- [Bryan Lojan](github.com/GaryHL)
+- [Lucía Gomez](https://github.com/luciagomezgast)
+- [Gary Lima](https://github.com/github.com/GaryHL)
+- [Bryan Lojan](https://github.com/orgs/techforyou-14/people/bryanlc1)
+- [Maynor Hernandez](https://github.com/maynors)
+- [Rafael Urendez](https://github.com/rurendez)
 
 ## ❤️ Agradecimientos
 Queremos expresar nuestro más sincero agradecimiento a los creadores de esta hackathon, fué una experiencia muy emocionante.
