@@ -55,6 +55,8 @@ $ npm run dev
 - [Bryan Lojan](https://github.com/orgs/techforyou-14/people/bryanlc1)
 - [Maynor Hernandez](https://github.com/maynors)
 - [Rafael Urendez](https://github.com/rurendez)
+- [Levi Flores](https://github.com/levifvy)
+
 
 ## ❤️ Agradecimientos
 Queremos expresar nuestro más sincero agradecimiento a los creadores de esta hackathon, fué una experiencia muy emocionante.
